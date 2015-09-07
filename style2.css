@@ -1,0 +1,272 @@
+html, body, ul, li, h1, h2, h3, h4 {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+h2{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #544e38;
+}
+img {
+	border: 0px;
+}
+img.trans {
+behavior: url(iepngfix.htc);
+}
+a {
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: underline;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.more {
+	text-align: right;
+}
+.clear {
+	clear: both;
+}
+
+body {
+	background: url(images/bg.jpg) repeat-x;
+	background-color: #4b4b4b;
+	text-align: center;
+	font: 12px arial, verdana, sans-serif;
+}
+#wrapper {
+	text-align: left;
+	margin: auto;
+	width: 900px;
+        position: relative;
+        padding-top: 68px;
+}
+
+#body {
+	background: url(images/body_bg.jpg) repeat-y;
+	color: white;
+	width: 100%;
+}
+#body-top {
+	background: top left url(images/body_top.jpg) no-repeat;
+	position: relative;
+}
+
+#body-bot {
+	background: bottom left url(images/body_bot.jpg) no-repeat;
+	padding-bottom: 17px;
+}
+
+h1 {
+	position: absolute;
+	top: 10px;
+	left: 13px;
+	font-size:26px;
+	color:#ffffff;
+	font-variant: small-caps;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h3 {
+	position: absolute;
+	top: 25px;
+	left:720px;
+	font-size:14px;
+	font-weight: bold;
+	color:#c64934;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#nav {
+	position: absolute;
+	top: 43px;
+	left: 500px;
+	
+}
+#nav  a {
+	background-image:url(images/menu.jpg);
+	width:90px;
+	height:19px;
+	display:inline;
+	float:left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align:center;
+	padding-top:6px;
+	text-decoration:none;
+	color:#c7c3bf;
+	font-weight:bolder;
+}
+#nav  a:hover {
+	color:#ffffff;
+}
+
+#body-bot {
+	padding-top: 1px;
+}
+#body-bot fonty {
+	padding-right: 500px;
+	color: #c64934;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-weight: bold;
+}
+#welcome {
+	float: left;
+	width: 170px;
+	padding-left: 9px;
+	background-color:transparent;
+	
+}
+#welcome a {
+	color: #F2F7F8;
+}
+#welcome a:hover {
+	color: #CFCCBF;
+}
+#welcome h2 {
+	text-align: center;
+	margin: 11px;
+	color:#ceb085;
+	font-size:24px;
+}
+#welcome p {
+	margin: 0px 19px;
+}
+#welcome .more {
+	margin-top: 18px;
+	margin-bottom: 10px;
+}
+#animation {
+	position: absolute;
+	top:450px; 
+	left:10px;
+}
+#animation2 {
+	position: absolute;
+	top:564px; 
+	left:10px;
+}
+#animation3 {
+	position: absolute;
+	top:500px; 
+	left:46px;
+	color:#c64934;
+	font-weight: bold;
+	font-size:14px;
+	width:80px;
+}
+
+#content {
+	float: right;
+	width: 656px;
+	padding-right: 30px;
+	padding-left: 10px;
+	padding-top: 1px;
+	color: #686454;
+	text-align: justify;
+}
+#contentinfo {
+        float: right;
+	width: 656px;
+        padding-top: 60px;
+	padding-right: 30px;
+	padding-left: 10px;
+	color: #000000;
+	text-align: justify;
+	font: 14px arial, sans-serif;
+}
+#contentinfo a {
+        color: gray;
+        font-weight: bold;
+	font: 11px arial, sans-serif;
+}
+#contentinfo a:hover {
+        color: #000000;
+        font-weight: bold;      
+	font: 11px arial, sans-serif;
+}
+#contentinfo .red {
+	font: 17px arial, sans-serif;
+	font-weight: bold;
+	color: #000000;
+}
+#contentinfo .look {
+	font: 12px arial, sans-serif;
+	font-weight: bold;
+	color: #000000;
+}
+#contentinfo .look:hover {
+	font: 12px arial, sans-serif;
+	font-weight: bold;
+	color: #686454;
+}
+#contentinfo .look2 {
+	font: 16px arial, sans-serif;
+	font-weight: bold;
+	color: #000000;
+}
+#contentinfo .look2:hover {
+	font: 16px arial, sans-serif;
+	font-weight: bold;
+	color: #686454;
+}
+#contentinfo .black {
+	font: 11px arial, sans-serif;
+	font-weight: bold;
+	color: #000000;
+}
+#content .gray {
+	font: 12px arial, sans-serif;
+	font-weight: bold;
+	color: #686454;
+}
+#content .left {
+	margin-right: 10px;
+}
+#content a {
+	color: #5A5644;
+}
+#content a:hover {
+	color: #26241A;
+}
+#contentinfo li {
+	list-style: circle;
+}
+#content2 {
+	width: 700px;
+	padding-right: 1px;
+	padding-left: 180px;
+	padding-top: 4px;
+	color: #686454;
+}
+#content2 .red {
+	font: 16px arial, sans-serif;
+	font-weight: bold;
+	color: #c64934;
+	padding-left: 28px;
+}
+#content2 .left {
+	margin-right: 1px;
+}
+#content2 a {
+	color: #5A5644;
+}
+#content2 a:hover {
+	color: #26241A;
+}
+#content2 li {
+	list-style: circle;
+}
+#footer {
+	font: 11px arial, sans-serif;
+	color: #ffffff;
+	text-align: center;
+	padding-right: 47px;
+}
+#footer p {
+	margin-top: 0.5em;
+}
