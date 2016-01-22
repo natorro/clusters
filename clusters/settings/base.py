@@ -5,18 +5,20 @@ BASE_DIR = Path(__file__).ancestor(3)
 
 SECRET_KEY = '%$s%tv(rbmu*ji&x0tc^nihh4wfqxly!37ue9$_7s*9hx&wa34'
 
-DJANGO_APPS = [
+DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+)
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = ()
 
-LOCAL_APPS = []
+LOCAL_APPS = (
+    'apps.home',
+)
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
