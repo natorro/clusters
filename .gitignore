@@ -1,2 +1,6 @@
 *~
-new_site/entorno
+apps/*.pyc
+apps/home/*.pyc
+apps/home/migrations/*.pyc
+clusters/*.pyc
+clusters/settings/*pyc
