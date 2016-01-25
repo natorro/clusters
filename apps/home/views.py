@@ -60,3 +60,62 @@ def historic(request):
     articles = list(Article.objects.all().order_by("-pub_date"))
     ctx = {'historic': articles}
     return render(request, 'historic.html',ctx)
+
+def baktum_manual(request):
+    articles = list(Article.objects.all().order_by("-pub_date"))
+    ctx = {'news': articles,
+            'number_articles':NUM_ARTICLES_SHOWED
+    }
+    return render(request, 'baktum-manual.html', ctx)
+
+def tutorial_queus(request):
+    articles = list(Article.objects.all().order_by("-pub_date"))
+    ctx = {'news': articles,
+            'number_articles':NUM_ARTICLES_SHOWED
+    }
+    return render(request, 'tutorial-queus.html', ctx)
+
+def mingus_manual(request):
+    articles = list(Article.objects.all().order_by("-pub_date"))
+    ctx = {'news': articles,
+            'number_articles':NUM_ARTICLES_SHOWED
+    }
+    return render(request, 'mingus-manual.html', ctx)
+
+def mkl(request):
+    return render(request, 'mkl.html')
+
+def cernlib(request):
+    articles = list(Article.objects.all().order_by("-pub_date"))
+    ctx = {'news': articles,
+            'number_articles':NUM_ARTICLES_SHOWED
+    }
+    return render(request, 'cernlib.html', ctx)
+
+def release_notes(request):
+    articles = list(Article.objects.all().order_by("-pub_date"))
+    ctx = {'news': articles,
+            'number_articles':NUM_ARTICLES_SHOWED
+    }
+    return render(request, 'release-notes.html', ctx)
+
+def vml_notes(request):
+    articles = list(Article.objects.all().order_by("-pub_date"))
+    ctx = {'news': articles,
+            'number_articles':NUM_ARTICLES_SHOWED
+    }
+    return render(request, 'vml-notes.html', ctx)
+
+def fftw2xmkl_notes(request):
+    articles = list(Article.objects.all().order_by("-pub_date"))
+    ctx = {'news': articles,
+            'number_articles':NUM_ARTICLES_SHOWED
+    }
+    return render(request, 'fftw2xmkl-notes.html', ctx)
+
+def fftw3xmkl_notes(request):
+    articles = list(Article.objects.all().order_by("-pub_date"))
+    ctx = {'news': articles,
+            'number_articles':NUM_ARTICLES_SHOWED
+    }
+    return render(request, 'fftw3xmkl-notes.html', ctx)

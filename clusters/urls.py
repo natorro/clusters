@@ -26,6 +26,20 @@ urlpatterns = [
     url(r'^lists/$', 'apps.home.views.lists', name='lists'),
     url(r'^news/(?P<id>\d+)/$', 'apps.home.views.news', name='news'),
     url(r'^historic/$', 'apps.home.views.historic', name='historic'),
+    url(r'^baktum_manual/$', 'apps.home.views.baktum_manual', name='baktum_manual'),
+    url(r'^tutorial_queus/$', 'apps.home.views.tutorial_queus', name='tutorial_queus'),
+    url(r'^mingus_manual/$', 'apps.home.views.mingus_manual', name='mingus_manual'),
+    url(r'^mkl/$', 'apps.home.views.mkl', name='mkl'),
+    url(r'^cernlib/$', 'apps.home.views.cernlib', name='cernlib'),
+    url(r'^release_notes/$', 'apps.home.views.release_notes', name='release_notes'),
+    url(r'^vml_notes/$', 'apps.home.views.vml_notes', name='vml_notes'),
+    url(r'^fftw2xmkl_notes/$', 'apps.home.views.fftw2xmkl_notes', name='fftw2xmkl_notes'),
+    url(r'^fftw23xmkl_notes/$', 'apps.home.views.fftw3xmkl_notes', name='fftw3xmkl_notes'),
+
+
+
+
+
 
 
 ]
