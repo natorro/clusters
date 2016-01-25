@@ -93,12 +93,11 @@
               <h4>Manuales</h4>
               <h5>Manuales b&aacute;sicos de uso de los clusters:</h5>
               <ul class="blocklist">
-                <li><a href="clup_manual.php" class="look">Ver Gu&iacute;a B&aacute;sica Clup</a></li>
-                <li><a href="baktum_manual.php" class="look">Ver Gu&iacute;a B&aacute;sica Baktum</a></li>
-                <li><a href="tutorial_colas.php" class="look">Tutorial para colas baktum y clup</a></li>
-                <li><a href="mingus_manual.php" class="look">Ver Gu&iacute;a B&aacute;sica Mingus</a></li>
-                <li><a href="mkl.php" class="look">Ver Documentaci&oacute;n completa<br> de la Math Kernel Library (MKL)</a></li>
-                <li><a href="cernlib.php" class="look">Informaci&oacute;n sobre biblioteca CERNLIB</a></li>
+                <li><a href="{% url "baktum_manual" %}" class="look">Ver Gu&iacute;a B&aacute;sica Baktum</a></li>
+                <li><a href="{% url "tutorial_queus" %}" class="look">Tutorial para colas baktum y clup</a></li>
+                <li><a href="{% url "mingus_manual" %}" class="look">Ver Gu&iacute;a B&aacute;sica Mingus</a></li>
+                <li><a href="{% url "mkl" %}" class="look">Ver Documentaci&oacute;n completa<br> de la Math Kernel Library (MKL)</a></li>
+                <li><a href="{% url "cernlib" %}" class="look">Informaci&oacute;n sobre biblioteca CERNLIB</a></li>
               </ul>
               <h5>IML:</h5>
               <ul class="blocklist">

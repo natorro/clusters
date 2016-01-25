@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{%block lists%}class="selected"{%endblock%}
+{%block body%}
+<h2>CERNLIB</h2>
+<div id="body">
+  <div id="body-top">
+
+    <div id="body-bot">
+
+
+
+      <div id="contentinfo">
+
+
+        <br><br><br><b>Introducci&oacute;n</b>
+
+        <p>La biblioteca para programas CERN es una colecci&oacute;n de bibliotecas de uso general y m&oacute;dulos mantenidos y ofrecidos
+          tanto en c&oacute;digo
+          fuente como en forma de binarios. Las dos aplicaciones m&aacute;s populares basadas en CERNLIB son PAW y GEANT 3.21, la mayor&iacute;a de estos
+          programas fueron desarrollados en el CERN y por lo tanto est&aacute;n orientados a las necesidades de un laboratorio de investigaci&oacute;n en
+          f&iacute;sica, es decir, matem&aacute;ticas generales, an&aacute;lisis de datos, simulaci&oacute;n de detectores, manejo de datos, etc. aplicable a un amplio
+          rango de problemas. Algunas herramientas como cfortran.h son desarrolladas fuera del CERN, algunos programas comerciales como NAG
+          tambi&eacute;n han sido adquiridos.
+
+          <p>El desarrollo y soporte de la biblioteca CERNLIB ha sido descontinuado, por lo que las bibliotecas que se encuentran en el cluster
+            (/opt/cernlib) se presentan como tales. La &uacute;ltima versi&oacute;n es la del 2005. Se recomienda ampliamente que se intente solucionar alg&uacute;n
+            problema con alguna biblioteca m&aacute;s nueva, como por ejemplo <a href="{% url "mkl"%}" class="look">MKL</a> &oacute; <a
+            href="{% static "docs/Math.pdf"%}" class="look" target="_blank">IMSL</a>.
+
+
+            <br><br><br><b>Documentaci&oacute;n</b>
+
+            <p>La documentaci&oacute;n sobre esta biblioteca se encuentra en el siguiente URL:
+
+              <p><a href="http://wwwasdoc.web.cern.ch/wwwasdoc/Welcome.html" class="look">http://wwwasdoc.web.cern.ch/wwwasdoc/Welcome.html</a>
+
+                <p>Para m&aacute;s informaci&oacute;n o si tiene dudas de c&oacute;mo usar o compilar sus programas con alguna biblioteca de CERNLIB
+                  por favor contactar
+                  al administrador a la extensi&oacute;n 2-50-01 o en el cub&iacute;culo 254.
+
+
+
+                </div>
+
+
+
+
+
+
+                <div class="clear"></div>
+
+              </div>
+            </div>
+          </div>
+          {%endblock%}
