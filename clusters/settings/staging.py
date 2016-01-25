@@ -19,18 +19,18 @@ from .base import *
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'fisica',
-	    'USER': "root",
-	    'PASSWORD': 'hola123',
-	    'HOST': 'localhost',
-	    'PORT': '6033',
+        'NAME': 'd8f8udpdq234vk',
+	    'USER': "nflzuybjgbwdgl",
+	    'PASSWORD': 'SaHblM-1d0vsZfwGgtn4MZ6el0',
+	    'HOST': 'ec2-54-83-52-144.compute-1.amazonaws.com',
+	    'PORT': '5432',
     }
 }
 
