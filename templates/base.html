@@ -69,120 +69,123 @@
 
 
         <ul>
-
+          {% if news %}
           <li>
             <h4>Noticias</h4>
             <ul class="newslist">
+              {% for article in news %}
+              {%if forloop.counter <= number_articles%}
               <li>
-                <p><span class="newslist-date">Jul 21</span>
-                  Quisque hendrerit lorem sit amet dui viverra dictum. Phasellus imperdiet magna sit amet arcu tristique ultricies ut in dui. <a href="#" class="readmore">Read More &raquo;</a></p>
+                <p><span class="newslist-date">{{article.pub_date}}</span>
+                  {{article.headline}} <a href="{% url "news" article.id %}" class="readmore"> Ver &raquo;</a></p>
                 </li>
-
+                {% endif%}
+                {% endfor %}
                 <li>
-                  <p><span class="newslist-date">May 09</span>
-                    Mauris et felis semper, congue dui ac, iaculis ipsum. Fusce non rhoncus risus, quis luctus nisl. Donec vitae velit tincidunt, tincidunt felis eu, suscipit nibh. </p>
-
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <h4>Manuales</h4>
-                <h5>Manuales b&aacute;sicos de uso de los clusters:</h5>
-                <ul class="blocklist">
-                  <li><a href="clup_manual.php" class="look">Ver Gu&iacute;a B&aacute;sica Clup</a></li>
-                  <li><a href="baktum_manual.php" class="look">Ver Gu&iacute;a B&aacute;sica Baktum</a></li>
-                  <li><a href="tutorial_colas.php" class="look">Tutorial para colas baktum y clup</a></li>
-                  <li><a href="mingus_manual.php" class="look">Ver Gu&iacute;a B&aacute;sica Mingus</a></li>
-                  <li><a href="mkl.php" class="look">Ver Documentaci&oacute;n completa<br> de la Math Kernel Library (MKL)</a></li>
-                  <li><a href="cernlib.php" class="look">Informaci&oacute;n sobre biblioteca CERNLIB</a></li>
-                </ul>
-                <h5>IML:</h5>
-                <ul class="blocklist">
-                  <li><a href="docs/Math.pdf" class="look">IMSL MATH LIBRARY Gu&iacute;a del usuario.</a></li>
-                  <li><a href="docs/SFUN.pdf" class="look">IMSL MATH LIBRARY<br> Gu&iacute;a del usuario para funciones especiales.</a></li>
-                  <li><a href="docs/Stat.pdf" class="look">IMSL STAT LIBRARY<br> Gu&iacute;a del usuario para funciones estad&iacute;sticas.</a></li>
-                </ul>
-
-              </li>
+                   <a href="{% url "historic"%}" class="readmore"> Ver Todas &raquo;</a>
+                </li>
+              </ul>
+            </li>
+            {% endif %}
 
 
+            <li>
+              <h4>Manuales</h4>
+              <h5>Manuales b&aacute;sicos de uso de los clusters:</h5>
+              <ul class="blocklist">
+                <li><a href="clup_manual.php" class="look">Ver Gu&iacute;a B&aacute;sica Clup</a></li>
+                <li><a href="baktum_manual.php" class="look">Ver Gu&iacute;a B&aacute;sica Baktum</a></li>
+                <li><a href="tutorial_colas.php" class="look">Tutorial para colas baktum y clup</a></li>
+                <li><a href="mingus_manual.php" class="look">Ver Gu&iacute;a B&aacute;sica Mingus</a></li>
+                <li><a href="mkl.php" class="look">Ver Documentaci&oacute;n completa<br> de la Math Kernel Library (MKL)</a></li>
+                <li><a href="cernlib.php" class="look">Informaci&oacute;n sobre biblioteca CERNLIB</a></li>
+              </ul>
+              <h5>IML:</h5>
+              <ul class="blocklist">
+                <li><a href="{% static "docs/Math.pdf" %}" class="look" target="_blank">IMSL MATH LIBRARY Gu&iacute;a del usuario.</a></li>
+                <li><a href="{% static "docs/SFUN.pdf" %}" class="look" target="_blank">IMSL MATH LIBRARY<br> Gu&iacute;a del usuario para funciones especiales.</a></li>
+                <li><a href="{% static "docs/Stat.pdf" %}" class="look" target="_blank">IMSL STAT LIBRARY<br> Gu&iacute;a del usuario para funciones estad&iacute;sticas.</a></li>
+              </ul>
+
+            </li>
+
+
+          </ul>
+
+        </aside>
+        <div class="clear"></div>
+      </div>
+      <footer>
+
+        <div class="footer-content width">
+          <h2 style="color:Gainsboro;" align="center">Links Externos</h2>
+
+          <ul>
+            <br>
+            <li><h4>MPI</h4></li>
+            <li><a href="http://www-unix.mcs.anl.gov/mpi/usingmpi/index.html" class="look" target="_blank">Using MPI: - Usando MPI</a></li>
+            <li><a href="http://www.llnl.gov/computing/tutorials/mpi/" class="look" target="_blank">MPI Tutorial: - Tutorial de MPI</a></li>
+            <li><a href="http://www-unix.mcs.anl.gov/mpi/tutorial/" class="look" target="_blank">MPI Tutorials on the web: - Tutoriales sobre MPI en el web</a></li>
+            <li><a href="http://ci-tutor.ncsa.uiuc.edu/login.php" class="look" target="_blank">National Center for supercomputer applicacions tutorials - Tutoriales del NCSCA</a></li>
+            <li><a href="http://www.osc.edu/supercomputing/training/mpi/" class="look" target="_blank">arallel programing with MPI - Programaci&oacute;n en paralelo con MPI</a></li>
+            <li><a href="http://scv.bu.edu/documentation/tutorials/MPI/" class="look" target="_blank">Multiprocessing by message passing - Multiproceso usando env&iacute;o de mensajes</a></li>
+            <li><a href="http://www.physics.unlv.edu/~pang/cp.html" class="look" target="_blank">F&iacute;sica computacional: An introduction to computacional physics:</a></li>
+          </ul>
+
+
+
+          <ul>
+            <br>
+            <li><h4>C</h4></li>
+            <li><a href="http://www.eskimo.com/~scs/cclass/notes/top.html" class="look" target="_blank">C Programming notes - Notas de programaci&oacute;n en C</a></li>
+            <li><a href="http://www.physics.unlv.edu/~pang/cp_c.html" class="look" target="_blank">C programs related to the book "An introduction to computacional physics": Programas en C relacionados con el libro "An introduction to computational physics"</a></li>
+          </ul>
+
+          <ul>
+            <br>
+            <li><h4>CUDA</h4></li>
+            <li><a href="http://www.nvidia.com/object/cuda_home_new.html" class="look" target="_blank">P&aacute;gina oficial de CUDA - Informaci&oacute;n general sobre la biblioteca y la tecnolog&iacute;a involucrada</a></li>
+            <li><a href="https://developer.nvidia.com/category/zone/cuda-zone" class="look" target="_blank">P&aacute;gina de desarrollo de CUDA - Tutoriales e informaci&oacute;n t&eacute;cnica para programaci&oacute;n de CUDA, particularmente la versi&oacute;n 5.0:</a></li>
+            <li><a href="https://developer.nvidia.com/cuda-downloads" class="look" target="_blank">P&aacute;gina de descargas de CUDA - Se recomienda esta p&aacute;gina si se quiere comenzar a desarrollar con CUDA en una computadora personal:</a></li>
+          </ul>
+
+          <ul>
+            <br>
+            <li><h4>Fortran 77 90/95</h4></li>
+            <li><a href="http://www.physics.unlv.edu/~pang/cp_f77.html" class="look" target="_blank">Fortran 77 programs related to the book "An introduction to computacional physics": <br>Programas en Fortran 77 relacionados al libro "An introduction to computational physics"</a></li>
+            <li><a href="http://www.physics.unlv.edu/~pang/cp_f90.html" class="look" target="_blank">Fortran 90 programs related to the book "An introduction to computacional physics: <br>Programas en Fortran 90 relacionados al libro "An introduction to computacional physics"</a></li>
+            <li><a href="http://www.nsc.liu.se/~boein/f77to90/" class="look" target="_blank">Fortran 90 for the Fortran 77 programmer: <br>Fortran 90 para el programador de Fortran 77</a></li>
+          </ul>
+
+          <ul>
+            <br>
+            <li><h4>Clusters</h4></li>
+            <li><a href="http://www.super.unam.mx/" class="look" target="_blank">Departamento de superc&oacute;mputo UNAM</a></li>
+            <li><a href="http://www.top500.org/" class="look" target="_blank">Top 500 mundial</a></li>
+
+          </ul>
+
+          <div align="center">
+            <ul class="endfooter">
+              <img style="max-height: 120px;" src="{% static "img/escudo.png" %}"/>
+              <li><a href="https://www.unam.mx/" class="look" target="_blank">UNAM</a></li>
             </ul>
+            <ul class="endfooter">
+              <img style="max-height: 120px;" src="{% static "img/logo_if.png" %}"/>
 
-          </aside>
+
+              <li><a href="http://www.fisica.unam.mx/" class="look" target="_blank">IFUNAM</a></li>
+            </ul>
+          </div>
+
+
+
           <div class="clear"></div>
         </div>
-        <footer>
-
-          <div class="footer-content width">
-            <h2 style="color:Gainsboro;" align="center">Links Externos</h2>
-
-            <ul>
-              <br>
-              <li><h4>MPI</h4></li>
-              <li><a href="http://www-unix.mcs.anl.gov/mpi/usingmpi/index.html" class="look">Using MPI: - Usando MPI</a></li>
-              <li><a href="http://www.llnl.gov/computing/tutorials/mpi/" class="look">MPI Tutorial: - Tutorial de MPI</a></li>
-              <li><a href="http://www-unix.mcs.anl.gov/mpi/tutorial/" class="look">MPI Tutorials on the web: - Tutoriales sobre MPI en el web</a></li>
-              <li><a href="http://ci-tutor.ncsa.uiuc.edu/login.php" class="look">National Center for supercomputer applicacions tutorials - Tutoriales del NCSCA</a></li>
-              <li><a href="http://www.osc.edu/supercomputing/training/mpi/" class="look">arallel programing with MPI - Programaci&oacute;n en paralelo con MPI</a></li>
-              <li><a href="http://scv.bu.edu/documentation/tutorials/MPI/" class="look">Multiprocessing by message passing - Multiproceso usando env&iacute;o de mensajes</a></li>
-              <li><a href="http://www.physics.unlv.edu/~pang/cp.html" class="look">F&iacute;sica computacional: An introduction to computacional physics:</a></li>
-            </ul>
-
-
-
-            <ul>
-              <br>
-              <li><h4>C</h4></li>
-              <li><a href="http://www.eskimo.com/~scs/cclass/notes/top.html" class="look">C Programming notes - Notas de programaci&oacute;n en C</a></li>
-              <li><a href="http://www.physics.unlv.edu/~pang/cp_c.html" class="look">C programs related to the book "An introduction to computacional physics": Programas en C relacionados con el libro "An introduction to computational physics"</a></li>
-            </ul>
-
-            <ul>
-              <br>
-              <li><h4>CUDA</h4></li>
-              <li><a href="http://www.nvidia.com/object/cuda_home_new.html" class="look">P&aacute;gina oficial de CUDA - Informaci&oacute;n general sobre la biblioteca y la tecnolog&iacute;a involucrada</a></li>
-              <li><a href="https://developer.nvidia.com/category/zone/cuda-zone" class="look">P&aacute;gina de desarrollo de CUDA - Tutoriales e informaci&oacute;n t&eacute;cnica para programaci&oacute;n de CUDA, particularmente la versi&oacute;n 5.0:</a></li>
-              <li><a href="https://developer.nvidia.com/cuda-downloads" class="look">P&aacute;gina de descargas de CUDA - Se recomienda esta p&aacute;gina si se quiere comenzar a desarrollar con CUDA en una computadora personal:</a></li>
-            </ul>
-
-            <ul>
-              <br>
-              <li><h4>Fortran 77 90/95</h4></li>
-              <li><a href="http://www.physics.unlv.edu/~pang/cp_f77.html" class="look">Fortran 77 programs related to the book "An introduction to computacional physics": <br>Programas en Fortran 77 relacionados al libro "An introduction to computational physics"</a></li>
-              <li><a href="http://www.physics.unlv.edu/~pang/cp_f90.html" class="look">Fortran 90 programs related to the book "An introduction to computacional physics: <br>Programas en Fortran 90 relacionados al libro "An introduction to computacional physics"</a></li>
-              <li><a href="http://www.nsc.liu.se/~boein/f77to90/" class="look">Fortran 90 for the Fortran 77 programmer: <br>Fortran 90 para el programador de Fortran 77</a></li>
-            </ul>
-
-            <ul>
-              <br>
-              <li><h4>Clusters</h4></li>
-              <li><a href="http://www.super.unam.mx/" class="look">Departamento de superc&oacute;mputo UNAM</a></li>
-              <li><a href="http://www.top500.org/" class="look">Top 500 mundial</a></li>
-
-            </ul>
-
-            <div align="center">
-              <ul class="endfooter">
-                <img style="max-height: 120px;" src="{% static "img/escudo.png" %}"/>
-                <li><a href="https://www.unam.mx/" class="look">UNAM</a></li>
-              </ul>
-              <ul class="endfooter">
-                <img style="max-height: 120px;" src="{% static "img/logo_if.png" %}"/>
-
-
-                <li><a href="http://www.fisica.unam.mx/" class="look">IFUNAM</a></li>
-              </ul>
-            </div>
-
-
-
-            <div class="clear"></div>
-          </div>
-          <div class="footer-bottom">
-            <p>&copy; Instituto de Física, UNAM - 2016. <!--<a href="http://zypopwebtemplates.com/">Free HTML5 Templates</a> by ZyPOP--></p>
-          </div>
-        </footer>
-      </div>
-    </body>
-    </html>
+        <div class="footer-bottom">
+          <p>&copy; Instituto de Física, UNAM - 2016. <!--<a href="http://zypopwebtemplates.com/">Free HTML5 Templates</a> by ZyPOP--></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  </html>

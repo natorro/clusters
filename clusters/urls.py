@@ -24,5 +24,8 @@ urlpatterns = [
     url(r'^manuals/$', 'apps.home.views.manuals', name='manuals'),
     url(r'^research/$', 'apps.home.views.research', name='research'),
     url(r'^lists/$', 'apps.home.views.lists', name='lists'),
+    url(r'^news/(?P<id>\d+)/$', 'apps.home.views.news', name='news'),
+    url(r'^historic/$', 'apps.home.views.historic', name='historic'),
+
 
 ]

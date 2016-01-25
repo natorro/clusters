@@ -14,4 +14,5 @@ class ArticleManager(models.Manager):
 class Article(models.Model):
     pub_date = models.DateField()
     headline = models.CharField(max_length=200)
+    description = models.TextField()
     content = models.TextField()

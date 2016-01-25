@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{%block body%}
+<h2>Histórico</h2>
+{% if historic %}
+<ul class="newslist">
+  {% for article in historic %}
+  <li>
+    <article>
+      <h3>{{article.headline}}</h3>
+      <div class="article-info">Publicado: <time datetime="2013-05-14">{{article.pub_date}}</time></div>
+
+      <p>{{article.description}}</content><a href="{% url "news" article.id %}" class="readmore"> Ver &raquo;</a></p>
+    </article>
+  </li>
+  {% endfor %}
+
+</ul>
+{%endif%}
+{%endblock%}
