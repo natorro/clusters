@@ -19,4 +19,10 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', 'apps.home.views.init', name='init'),
+    url(r'^features/$', 'apps.home.views.features', name='features'),
+    url(r'^software/$', 'apps.home.views.software', name='software'),
+    url(r'^manuals/$', 'apps.home.views.manuals', name='manuals'),
+    url(r'^research/$', 'apps.home.views.research', name='research'),
+    url(r'^lists/$', 'apps.home.views.lists', name='lists'),
+
 ]

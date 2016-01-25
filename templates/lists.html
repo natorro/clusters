@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{%block lists%}class="selected"{%endblock%}
+{%block body%}
+<h2>Listas de Correo</h2>
+
+<p>Actualmente se cuenta con dos listas de correo para resolver dudas, sugerencias e intercambiar tips:
+
+  <center>
+    <p><a href="brodix.php" class="look">http://pegaso.fisica.unam.mx/mailman/listinfo/brodix</a>
+      <p><a href="general.php" class="look">http://pegaso.fisica.unam.mx/mailman/listinfo/cluster</a>
+      </center>
+
+
+      <p>Para suscribirse s&oacute;lo es necesario ser usuario de alguno de los clusters del Instituto de F&iacute;sica, en caso de ser un usuario externo se puede solicitar la entrada v&iacute;a web y notificarlo a Carlos L&oacute;pez a trav&eacute;s de la extensi&oacute;n 5622-5001.
+
+        <br><br><br>
+
+        <center><img src="{% static "img/listas.jpg"%}"></center>
+
+        {%endblock%}
